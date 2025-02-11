@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, PlusCircle, MapPin } from 'lucide-react';
+import Announce from './announce.tsx';
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState<'search' | 'propose'>('search');
@@ -60,7 +61,10 @@ const HomePage = () => {
               </button>
             </div>
           </div>
-
+          <div className="bg-white p-4 rounded-lg shadow-sm">
+            <h2 className="text-lg font-semibold mb-4">Quelques annonces</h2>
+            <Announce />
+          </div>
           <div className="bg-white p-4 rounded-lg shadow-sm">
             <h2 className="text-lg font-semibold mb-4">Tables à proximité</h2>
             <div className="space-y-4">
